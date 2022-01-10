@@ -67,9 +67,9 @@ class TableViewController: UITableViewController {
         // Configure the cell...
 
         if (currentItem["isComplited"] as? Bool) == true {
-            cell.accessoryType = .checkmark
+            cell.imageView?.image = UIImage(named: "check.png")
         } else {
-            cell.accessoryType = .none
+            cell.imageView?.image = UIImage(named: "uncheck.png")
         }
         
         return cell
@@ -98,11 +98,11 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         if changeState(at: indexPath.row) {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            tableView.cellForRow(at: indexPath)?.imageView?.image = UIImage(named: "check.png")
         } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            tableView.cellForRow(at: indexPath)?.imageView?.image = UIImage(named: "uncheck.png")
         }
         
     }
