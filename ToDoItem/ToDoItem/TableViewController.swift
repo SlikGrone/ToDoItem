@@ -44,7 +44,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView()
-        tableView.backgroundColor = UIColor.groupTableViewBackground
+        tableView.backgroundColor = UIColor.brown
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
