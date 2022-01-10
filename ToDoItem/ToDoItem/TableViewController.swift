@@ -29,8 +29,10 @@ class TableViewController: UITableViewController {
         let alertAction2 = UIAlertAction(title: "Create", style: .cancel) { (alert) in
             // добавить новую запись
             let newItem =  alertController.textFields![0].text
-            addItem(nameItem: newItem!)
-            self.tableView.reloadData()
+            if newItem != "" {
+                addItem(nameItem: newItem!)
+                self.tableView.reloadData()
+            }
         }
         
         alertController.addAction(alertAction1)
@@ -44,7 +46,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView()
-        tableView.backgroundColor = UIColor.brown
+        tableView.backgroundColor = UIColor.white
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
