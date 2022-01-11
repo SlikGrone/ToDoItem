@@ -47,6 +47,7 @@ class TableViewController: UITableViewController {
 
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = UIColor.white
+        tableView.isEditing  = true
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -80,13 +81,13 @@ class TableViewController: UITableViewController {
             cell.imageView?.image = UIImage(named: "uncheck.png")
         }
         
-        if tableView.isEditing {
-            cell.textLabel?.alpha = 0.4
-            cell.imageView?.alpha = 0.4
-        } else {
-            cell.textLabel?.alpha = 1
-            cell.imageView?.alpha = 1
-        }
+//        if tableView.isEditing {
+//            cell.textLabel?.alpha = 0.4
+//            cell.imageView?.alpha = 0.4
+//        } else {
+//            cell.textLabel?.alpha = 1
+//            cell.imageView?.alpha = 1
+//        }
         
         return cell
     }
